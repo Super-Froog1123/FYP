@@ -1,0 +1,44 @@
+<!--
+  Scroll Background Module - HTML Template
+  使用方法：将此代码粘贴到你的页面中需要的位置
+
+  data-bg 的值从 0 开始，对应背景图片的索引
+-->
+<section class="scroll-bg-module">
+  <!-- 背景舞台（按顺序添加你的背景图） -->
+  <div class="bg-stage" aria-hidden="true">
+    <img class="is-active" src="YOUR_IMAGE_PATH/bg1.png" alt="">
+    <img src="YOUR_IMAGE_PATH/bg2.png" alt="">
+    <img src="YOUR_IMAGE_PATH/bg3.png" alt="">
+    <!-- 添加更多背景图... -->
+  </div>
+
+  <!-- 压暗层（可选，用于降低背景亮度） -->
+  <div class="bg-dim" aria-hidden="true"></div>
+
+  <!-- 内容滚动区 -->
+  <div class="scroll-content">
+
+    <!-- 每个 section 对应一张背景图，data-bg 值 = 背景图索引 -->
+    <section class="text_" data-bg="0">
+      <div class="overlay-card">
+        <p>第一段文字内容</p>
+      </div>
+    </section>
+
+    <section class="text_" data-bg="1">
+      <div class="overlay-card">
+        <p>第二段文字内容</p>
+      </div>
+    </section>
+
+    <section class="text_" data-bg="2">
+      <div class="overlay-card">
+        <p>第三段文字内容</p>
+      </div>
+    </section>
+
+    <!-- 添加更多 section... -->
+
+  </div>
+</section>

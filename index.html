@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+
+  <title>“龙虾"背后的AI焦虑症</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@400;700&family=Roboto:wght@100;300;400;500;700"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="css/theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link rel="stylesheet" type="text/css" href="css/article.css" />
+  <link rel="stylesheet" type="text/css" href="css/components/network-graph.css" />
+  <link rel="stylesheet" type="text/css" href="css/components/hx-pan.css" />
+  <link rel="stylesheet" type="text/css" href="utils/scroll-bg-module/style.css" />
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+  <main>
+    <article>
+      <section class="intro no-cover story-intro">
+        <br /><br />
+        <div class="cover">
+          <img class="story-cover-image" src="img/title.png" alt="" />
+        </div>
+
+        <h1 id="maintitle">“龙虾"背后的AI焦虑症</h1>
+
+        <div class="author story-author">
+          <h2>李奕君</h2>
+        </div>
+      </section>
+
+      <section class="standar">
+        <div id="scroll-bg-container"></div>
+        <script src="utils/scroll-bg-module/script.js"></script>
+        <script>
+        scrollBgModule.init({
+          target: '#scroll-bg-container',
+          images: [
+            'img/scence1.png',
+            'img/scence2.png',
+            'img/scence3.png',
+            'img/scence4.png'
+          ],
+          contents: [
+            { text: '2026年3月的一个周末，深圳龙岗区某会议中心。</p><p>会场里坐无虚席，甚至国道都挤满了人。台上，演讲者头戴一顶红色龙虾帽，正在激情澎湃地讲述"如何用AI改变命运"。台下，观众们举着手机疯狂拍照，有人在做笔记，有人在录视频发朋友圈。</p><p>这不是什么追星现场，而是深圳"龙虾千人大会"的日常一幕。' },
+            { text: '此龙虾并非餐桌上的美味，而是一款名为OpenClaw的开源智能体软件（AI Agent），其图标酷似一只红色的龙虾而得名。本地电脑安装使用此软件，部署过程需要"喂算力"，操作复杂如同养殖，因此人们称之为"养龙虾"。</p><p>OpenClaw作为连接LLM大脑的桥梁，实现了集成工具调用（agent），社交媒体连接等功能，可以根据用户的自然指令在电脑上执行相关操作，被视作AI从"对话"走向"执行"的关键一步。' },
+            { text: '然而，越是狂热的追捧，越暴漏出人们心底的不安。</p><p>有人凌晨三点还在论坛里追问"龙虾配置参数"，害怕自己落后；有人花几万块租显卡，只为更快"养好一只龙虾"；有人辞掉了工作，押注这场技术革命带来的阶级跃迁。他们相信龙虾能改变命运——却很少有人敢问：如果龙虾真的能替代一切，那我们这些"养虾人"，又站在哪里？' },
+            { text: '会场的掌声再热烈，也盖不住哪个无人明说却人人感受到的问题：</p><p>这究竟是通往新世界的船票还是另一场被裹挟的焦虑？' }
+          ],
+          options: {
+            cardBg: 'rgba(255,255,255,0.95)'
+          }
+        });
+        </script>
+
+
+        <section class="text story-section">
+          <h2>焦虑的解剖</h2>
+
+          <br /><br />
+
+          <p>
+            深夜11点，张琳躺在床上刷手机，朋友圈里又有人转发了"AI即将取代这10种职业"的文章。这已经是她本周收藏的第十二篇类似文章。收藏，但从未真正读完。
+          </p>
+
+          <p>
+            她不是个例。在社交媒体的算法推荐下，一种叙事正在像病毒般蔓延——"AI正在重塑所有行业，如果你不学会使用AI，很快就会被时代淘汰。"
+          </p>
+
+          <p>
+            这种论调从朋友圈的转发文章，到短视频平台的"专家解读"，无一不在制造紧迫感。但真正值得关注的是这背后交织的两股恐惧。
+          </p>
+
+          <p>
+            社交平台上，AI焦虑呈现出两种截然不同却又相互交织的面貌。
+          </p>
+
+          <h2>FOMO（Fear of Missing Out）</h2>
+
+          <br /><br />
+
+          <p>
+            朋友圈里，人人都在讨论AI、使用AI。有人晒出用ChatGPT写的文章，有人展示AI生成的精美图片，还有人分享"我用AI一小时完成了一天的工作"。如果你不跟上，仿佛就会被同龄人甩开。
+          </p>
+
+          <p>
+            这种焦虑催生了特定行为：看到"AI一键生成XX"的标题就忍不住点击，生怕错过某个"革命性工具"；收藏了无数AI教程，报名了各种AI课程，却从未真正学完一个；手机里装了十几个AI应用，打开率最高的却永远是那一个。
+          </p>
+
+          <p>
+            "就像朋友圈都在学游泳，而你还站在岸上。"一位互联网从业者这样形容，"你不知道水里到底有多深，但你确定自己不想溺水。"
+          </p>
+
+          <h2>FOBO（Fear of Being Obsolete）</h2>
+
+          <br /><br />
+
+          <p>
+            与错失恐惧不同，被淘汰恐惧指向的是一个更根本的问题：当AI能做的事情越来越多，我还有什么价值？
+          </p>
+
+          <p>
+            一位从事文案工作五年的编辑告诉笔者，自从ChatGPT横空出世，她就开始失眠。"AI写的文案，比我写的快，比我写得好，还不会累。那我存在的意义是什么？"
+          </p>
+
+          <p>
+            这不仅仅是职业技能的焦虑，而是对身份认同的危机——当"我会做什么"不再定义"我是谁"，人们便陷入了存在主义的困境。
+          </p>
+
+          <p>
+            社交媒体的算法推荐机制放大了这两种恐惧。你越关注AI相关内容，平台就越推送相关内容，形成一个"人人都在用AI、AI正在取代一切"的信息茧房。
+          </p>
+
+          <h2 class="story-subtitle">数据背后：依赖正在形成</h2>
+
+          <br /><br />
+
+          <p>
+            比起表层的焦虑情绪，更值得关注的，是AI正在重塑人们解决问题的方式。来自 China Youth Daily 与 Soul 联合发布的一项大学生AI使用报告显示，65.9%的大学生在遇到问题时，第一反应是求助AI。
+          </p>
+
+          <p>
+            这个数据的关键，不在于“使用AI"，而在于“第一反应"的转移。二十年前，人们会打开搜索引擎，在海量信息中筛选、比对和判断；十年前，人们更多转向社区平台，通过阅读不同观点来形成自己的理解；而今天，越来越多的人选择直接向AI提问，并获得一个已经整理好的答案。信息获取的路径，从“多源筛选"，演变为“一步到位"。
+          </p>
+
+          <p>
+            表面上，这是效率的跃迁，但更深层的变化正在发生：当答案变得过于容易获得，提问本身的能力却在悄然萎缩。一位高校教师提到，学生提交的作业越来越“完美"，但在面对开放性问题时反应却越来越迟钝——他们习惯于从AI那里获取答案，却不再习惯自己提出问题。
+          </p>
+
+          <p>
+            与此同时，AI的角色也在悄然扩展。它不再只是信息工具，还被用于优化沟通、缓解情绪，甚至成为某种“对话对象"。有人借助AI生成社交话题，缓解交流焦虑；有人在虚拟对话中倾诉压力；也有人在AI辅助下完成写作、设计与编程。AI正从工具滑向伙伴，而这种关系的转变，正是依赖开始形成的信号。
+          </p>
+
+        </section>
+
+        <section class="text story-section">
+          <h2 class="story-subtitle">卖铲人的黄金时代</h2>
+
+          <br /><br />
+
+          <p>
+            与每一轮技术浪潮相似，最先捕捉到机会的，往往不是使用技术的人，而是围绕技术提供服务的“卖铲人"。围绕“养龙虾"，一条完整的商业链条正在迅速成型：在电商平台上，“OpenClaw代安装"等服务大量出现，一些原本从事IT运维的从业者，将其发展为新的收入来源；更进一步，有人开始提供“硬件+部署+培训"的全套方案，价格动辄数千元，甚至出现了贴牌销售的“AI主机"。与此同时，在知识付费领域，“养虾教程"“AI自动化课程"等内容也迅速走红，形成了另一层变现路径。
+          </p>
+
+          <h2 class="story-subtitle">大厂的跟进</h2>
+
+          <br /><br />
+
+          <p>
+            这种现象的背后，也与厂商之间的竞争密切相关。以腾讯为代表的互联网公司，正在加速布局AI代理系统，并尝试将类似能力整合进微信、QQ等产品之中；其他公司亦在同步推进，竞争不断加剧。腾讯云开发者AI产品负责人丁宁（Dino）在香港浸会大学的一次讲座中，以腾讯CodeBuddy产品序列为案例，分享了AI Coding的发展与落地——当大厂的产品经理坐下来谈AI时，他们看到的图景，与社交媒体上的狂热叙事并不相同。
+          </p>
+
+          <p>
+            对于OpenClaw这类开源智能体产品，丁宁的态度出乎意料地冷静。他首先指出，OpenClaw是一个第三方开源项目，而非成熟的产品——"因为它有可能权限无限大，所以你最重要的是要有足够的能力或者企业帮你把这个项目变成一个在安全的前提下帮你本地部署起来。这是前提。"至于使用心态，他主张"平常心"——用得上就用，用不上也不必刻意，不必被焦虑裹挟。
+          </p>
+
+          <p>
+            同一所大学的课堂上，计算机科学系讲师麻時鈔博士（Dr. Shichao Ma）则从技术架构的层面，揭示了"龙虾"更底层的运作逻辑：OpenClaw本质上是一个将大语言模型转化为"可调用工具、可执行工作流"的智能体平台，由对话界面层、编排层和执行层三层架构构成，并依托Skills（技能引导）、Heartbeat（心跳轮询）与Memory（Markdown明文记忆）等核心机制运行。然而，正是这些机制，埋下了安全与成本的隐患——沙盒失效、提示注入、明文泄露密钥、Token开销悄然攀升。
+          </p>
+
+          <p>
+            一位大厂产品经理呼吁"平常心"，一位计算机学者警告"沙盒可能失效"——两种声音指向同一个结论：在热潮中保持清醒，比追风口更重要。
+          </p>
+
+          <p>
+            然而，在热潮之下，成本结构同样在悄然转移。运行智能体系统需要持续的计算资源支持，尤其是在使用高性能模型时，费用会显著上升。有数据显示，在高频使用场景中，每月成本可能达到数百美元。由此形成一种典型结构：平台与技术提供方获取收益，而普通用户则在不知不觉中承担起持续的使用成本。
+          </p>
+
+          <h2 class="story-subtitle">"龙虾十条"与产业野心</h2>
+
+          <br /><br />
+
+          <p>
+            面对这波风潮，深圳政府选择了主动拥抱。
+          </p>
+
+          <p>
+            2026年3月，深圳龙岗区推出"龙虾十条"产业政策，涵盖资金补贴、场地支持、人才培养等多个维度。其中，最高补贴金额达500万元。
+          </p>
+
+          <p>
+            政府的逻辑很清晰：与其让这波风潮无序发展，不如将其引导成为真正的产业动力。OPC（One Person Company，一人公司）创业生态，成为深圳押注的新方向。
+          </p>
+
+        </section>
+
+        <section class="text story-section">
+          <h2 class="story-subtitle">冷静！"为焦虑买单"的代价</h2>
+
+          <br /><br />
+
+          <p>
+            麻時鈔博士的警告更为具体。他指出，OpenClaw可以执行命令、编辑文件、自动化浏览器操作——"如果沙盒机制薄弱或被禁用，错误可能直接影响真实机器和账户"；若代理读取了不受信任的内容，该内容可能操纵模型以不安全的方式调用工具或泄露数据；记忆以Markdown明文存储在工作空间中，日志和上下文可能意外引入用户不希望代理暴露的文件、笔记或密钥；而频繁的心跳运行、大量上下文加载与工具循环调用，更可能"悄无声息地推高Token开销和延迟"。
+          </p>
+
+          <p>
+            结果往往是：花了几百块安装，又花了数百块API费用，最后发现"并没有什么实际用途"，只能闲置——甚至可能因为安全配置不当而付出更大代价。
+          </p>
+
+          <p>
+            "不要因为焦虑而养虾，要因为'想偷懒'且'养得起'而养虾。"——某技术博主
+          </p>
+
+          <h2 class="story-subtitle">当龙虾褪去光环</h2>
+
+          <br /><br />
+
+          <p>
+            技术革命从来不只是技术本身。它总是伴随着新的生意、新的投机、新的社会心理现象。"养龙虾"风潮，折射出的是这个时代的集体焦虑——对未来的不确定，对被淘汰的恐惧，对"做点什么"的迫切需求。
+          </p>
+
+          <p>
+            但焦虑本身并不是问题。问题是，当焦虑成为被收割的筹码，谁来为这场狂欢买单？
+          </p>
+
+          <p>
+            丁宁的判断更为根本。他指出，当AI工具发展到能够处理文案、搜索、调研等操作层面的工作时，"这些operation level（操作层面）的工作，你不用再去做了"——不是因为AI没用，而是因为当人人都会用时，它就不再是"竞争优势"，而只是"基础设施"。
+          </p>
+
+          <p>
+            到那时，真正的问题才会浮现：当AI工具变得人人可用时，你的竞争力在哪里？
+          </p>
+
+          <p>
+            丁宁的回答是："是不是你的industry know-how（行业诀窍）？是不是你的品味？是不是你的格调？是不是你对你这个行业、你对某些方面自己深度的思考和洞察？守住这些东西。"
+          </p>
+
+        </section>
+
+        <div class="story-spacer"></div>
+      </section>
+    </article>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+  <script src="js/modules/charts.js"></script>
+  <script src="js/modules/payment-network.js"></script>
+  <script src="js/modules/payment-methods-packed.js"></script>
+  <script src="js/lib/step-observer.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

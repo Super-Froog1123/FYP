@@ -1,0 +1,101 @@
+/**
+ * Scroll Background Module - Styles
+ * 将此文件引入你的页面：<link rel="stylesheet" href="style.css">
+ */
+
+/* ===== 模块总容器：关键隔离层 ===== */
+.scroll-bg-module {
+  position: relative;
+  isolation: isolate;           /* 防止 z-index / fixed 外溢 */
+  min-height: 1000vh;
+}
+
+/* ===== 背景舞台 ===== */
+.scroll-bg-module .bg-stage {
+  position: sticky;     /* 固定在视口 */
+  top: 0;
+  height: 100vh;       /* 一屏舞台 */
+  z-index: -2;
+  overflow: hidden;
+}
+
+.scroll-bg-module .bg-stage img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.12);
+  max-width: 60%;
+  max-height: 80%;
+  object-fit: contain;
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 1.2s ease;
+}
+
+.scroll-bg-module .bg-stage img.is-active {
+  opacity: 1;
+}
+
+/* ===== 背景压暗（可选） ===== */
+.scroll-bg-module .bg-dim {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  /* 如需压暗效果，可添加：
+  background: rgba(0, 0, 0, 0.3);
+  */
+}
+
+/* ===== 内容滚动区 ===== */
+.scroll-bg-module .scroll-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== 每一段触发区 ===== */
+.scroll-bg-module section.text_ {
+  min-height: 170vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20vh 8vw;
+}
+
+.scroll-bg-module section.text_:first-of-type {
+  min-height: 100vh;
+  padding-top: 5vh;
+}
+
+.scroll-bg-module section.text_:last-of-type {
+  min-height: 100vh;
+  padding-bottom: 5vh;
+}
+
+/* ===== 文字卡片 ===== */
+.scroll-bg-module .overlay-card {
+  width: 480px;
+  max-width: 90vw;
+  color: #000000;
+  padding: 26px 30px;
+  border-radius: 18px;
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-bg-module .overlay-card h2 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.2;
+}
+
+.scroll-bg-module .overlay-card p {
+  margin: 0;
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.7;
+  opacity: 0.95;
+}

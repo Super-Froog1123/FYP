@@ -1,0 +1,23 @@
+<!--
+  HX-Pan Module - HTML Template
+  使用方法：将此代码粘贴到你的页面中需要的位置
+
+  data-zoom 控制图片放大倍数（建议 1~2 之间）
+  修改 --hx-pan-zoom, --hx-pan-offset-y, --hx-pan-radius 可微调样式
+-->
+
+<!-- 引入样式 -->
+<link rel="stylesheet" href="utils/hx-pan-module/style.css">
+
+<!-- 横向滚轮浏览容器 -->
+<div class="hx-pan" tabindex="0" data-zoom="1.6"
+     style="height: 90vh; --hx-pan-zoom: 1.6; --hx-pan-offset-y: -190px; --hx-pan-radius: 14px;">
+  <img src="YOUR_IMAGE_PATH/timeline.png" alt="超宽PNG">
+</div>
+
+<!-- 引入脚本并初始化 -->
+<script src="utils/hx-pan-module/script.js"></script>
+<script>
+  // 如果使用了函数式调用方式，可忽略此处的初始化
+  // 此模板方式下，script.js 会自动查找 .hx-pan 元素并绑定事件
+</script>

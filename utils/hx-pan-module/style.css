@@ -1,0 +1,35 @@
+/**
+ * HX-Pan Module - Styles
+ * 超宽 PNG 横向滚轮浏览模块
+ * 将此文件引入你的页面：<link rel="stylesheet" href="style.css">
+ */
+
+/* ===== 容器 ===== */
+.hx-pan {
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  border-radius: var(--hx-pan-radius, 14px);
+  cursor: grab;
+
+  /* 隐藏滚动条（各浏览器） */
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE/旧 Edge */
+}
+
+.hx-pan::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.hx-pan.dragging {
+  cursor: grabbing;
+}
+
+/* ===== 图片：用真实布局尺寸放大，产生更宽的可滚动区 ===== */
+.hx-pan img {
+  height: calc(100% * var(--hx-pan-zoom, 1));
+  width: auto;
+  display: block;
+  margin-top: var(--hx-pan-offset-y, -190px);
+}
