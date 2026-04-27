@@ -1,0 +1,11 @@
+title,onet_soc_code,exposure_beta_pct,skill_level,skill_label,employment_2024_us,group,openai_source,employment_source
+Writers and Authors,27-3043.00,80.8,5,本科,49450,media,GPTs are GPTs occ_level.csv,BLS OOH 2024
+News Analysts Reporters and Journalists,27-3023.00,63.3,5,本科,45020,media,GPTs are GPTs occ_level.csv,BLS OOH 2024
+Editors,27-3041.00,64.7,5,本科,95700,media,GPTs are GPTs occ_level.csv,BLS OOH 2024
+Registered Nurses,29-1141.00,38.1,5,本科,3172500,health,GPTs are GPTs occ_level.csv,BLS OOH 2024
+Nurse Practitioners,29-1171.00,31.5,6,硕士,323900,health,GPTs are GPTs occ_level.csv,BLS OOH 2024
+Physicians Pathologists,29-1222.00,31.8,7,博士或职业学位,12600,health,GPTs are GPTs occ_level.csv,BLS OOH 2024
+Home Health Aides,31-1121.00,3.8,2,高中或同等学历,3810800,care,GPTs are GPTs occ_level.csv,BLS OOH 2024
+Carpenters,47-2031.00,8.9,1,无正式门槛,942000,manual,GPTs are GPTs occ_level.csv,BLS OOH 2024
+Roofers,47-2181.00,0.0,1,无正式门槛,135140,manual,GPTs are GPTs occ_level.csv,BLS OOH 2024
+Construction Laborers,47-2061.00,2.5,1,无正式门槛,1298900,manual,GPTs are GPTs occ_level.csv,BLS OOH 2024

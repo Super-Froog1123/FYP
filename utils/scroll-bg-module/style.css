@@ -7,7 +7,7 @@
 .scroll-bg-module {
   position: relative;
   isolation: isolate;           /* 防止 z-index / fixed 外溢 */
-  min-height: 1000vh;
+  min-height: 100vh;
 }
 
 /* ===== 背景舞台 ===== */
@@ -57,11 +57,11 @@
 
 /* ===== 每一段触发区 ===== */
 .scroll-bg-module section.text_ {
-  min-height: 170vh;
+  min-height: 155vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20vh 8vw;
+  padding: 22vh 8vw;
 }
 
 .scroll-bg-module section.text_:first-of-type {
@@ -76,8 +76,8 @@
 
 /* ===== 文字卡片 ===== */
 .scroll-bg-module .overlay-card {
-  width: 480px;
-  max-width: 90vw;
+  width: min(680px, 92vw);
+  max-width: 92vw;
   color: #000000;
   padding: 26px 30px;
   border-radius: 18px;

@@ -1,0 +1,33 @@
+source,target,relation,weight
+OpenClaw,AI Agent,属于或实现,5
+OpenClaw,Tool Calling,技术能力,4
+OpenClaw,MCP,协议连接,4
+OpenClaw,本地部署,使用方式,4
+OpenClaw,微信连接,应用场景,5
+OpenClaw,自动化,执行能力,4
+OpenClaw,数字劳动力,商业叙事,3
+OpenClaw,AI焦虑,社会情绪,4
+OpenClaw,副业,大众想象,3
+OpenClaw,技术崇拜,文化投射,3
+OpenClaw,开源社区,社群属性,3
+LLM,AI Agent,能力基础,5
+AI Agent,MCP,调用生态,4
+AI Agent,Workflow,执行方式,4
+AI Agent,Tool Calling,核心机制,5
+AI Agent,数字劳动力,商业化表达,5
+AI Agent,自动化,应用方向,4
+AI Agent,智能体平台,产品化路径,4
+MCP,Tool Calling,协议接口,5
+RAG,Workflow,知识流程,3
+Workflow,自动化,平台能力,4
+Claude Code,AI编程,产品类型,5
+Cursor,AI编程,产品类型,5
+Coze,AI Agent,产品类型,4
+Dify,Workflow,平台能力,4
+Manus,AI Agent,产品类型,3
+数字劳动力,降本增效,企业目标,4
+数字劳动力,技能升级,组织要求,3
+AI焦虑,替代,情绪延伸,4
+替代,裁员,现实担忧,3
+提效,降本增效,商业语言,4
+AI焦虑,技能升级,行为反应,3

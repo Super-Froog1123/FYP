@@ -1,0 +1,20 @@
+Category,Metric,Metric_Value,Unit,Context,Source
+capacity_gap,leaders_need_productivity_gain,53,percent,Leaders who say productivity must increase,Microsoft Work Trend Index 2025
+capacity_gap,workers_lack_time_or_energy,80,percent,Workers and leaders who say they lack enough time or energy to do their work,Microsoft Work Trend Index 2025
+work_fragmentation,employees_feel_chaotic_fragmented,48,percent,Employees who describe work as chaotic and fragmented,Microsoft Work Trend Index 2025
+work_fragmentation,leaders_feel_chaotic_fragmented,52,percent,Leaders who describe work as chaotic and fragmented,Microsoft Work Trend Index 2025
+work_fragmentation,average_daily_interruptions,275,count,Average interruptions from meetings emails and messages per day,Microsoft Work Trend Index 2025
+agent_strategy,leaders_rethinking_strategy_this_year,82,percent,Leaders who say this is a pivotal year to rethink strategy and operations,Microsoft Work Trend Index 2025
+agent_strategy,leaders_plan_to_integrate_agents,81,percent,Leaders planning broad agent integration in the next 12 to 18 months,Microsoft Work Trend Index 2025
+digital_labor,leaders_confident_in_digital_labor,82,percent,Leaders confident using digital labor to expand team capacity,Microsoft Work Trend Index 2025
+frontier_firms,employees_optimistic_about_future,93,percent,Frontier Firm employees optimistic about future work opportunities,Microsoft Work Trend Index 2025
+frontier_firms,employees_not_worried_about_job_loss,79,percent,Frontier Firm employees not worried AI will take their job,Microsoft Work Trend Index 2025
+global_average,employees_worried_about_job_loss,43,percent,Global average share worried AI will take their job,Microsoft Work Trend Index 2025
+workforce_strategy,prioritize_ai_skilling,47,percent,Leaders considering AI-specific skilling of existing workforce,Microsoft Work Trend Index 2025
+workforce_strategy,maintain_headcount_use_digital_labor,45,percent,Leaders maintaining headcount while using AI as digital labor,Microsoft Work Trend Index 2025
+ai_roles,consider_hiring_ai_roles,78,percent,Leaders considering hiring AI specific roles,Microsoft Work Trend Index 2025
+ai_roles,ai_trainer,32,percent,Top new AI role under consideration,Microsoft Work Trend Index 2025
+ai_roles,ai_data_specialist,32,percent,Top new AI role under consideration,Microsoft Work Trend Index 2025
+ai_roles,ai_security_specialist,31,percent,Top new AI role under consideration,Microsoft Work Trend Index 2025
+ai_roles,ai_agent_specialist,30,percent,Top new AI role under consideration,Microsoft Work Trend Index 2025
+ai_roles,ai_roi_analyst,29,percent,Top new AI role under consideration,Microsoft Work Trend Index 2025

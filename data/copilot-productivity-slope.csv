@@ -1,0 +1,3 @@
+scenario,minutes,notes,source
+传统手工生产,160,示意基线 不是官方原始实验均值,Illustrative baseline for slope chart
+AI 辅助生产,102.7,按 GitHub Copilot 官方实验 55.8% faster 换算得出,Microsoft Research 2023 GitHub Copilot experiment

@@ -1,0 +1,207 @@
+/* ── Chart 12: OpenClaw Gov Rollout Table ── */
+.chart12-panel {
+  position: relative;
+  overflow: visible;
+  padding: 28px 24px 22px;
+  margin: 32px auto !important;
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #111827 !important;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+.chart12-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.chart12-top-line {
+  height: 1px !important;
+  background: #e5e7eb !important;
+  margin-bottom: 14px !important;
+}
+
+.chart12-panel h2 {
+  margin: 0 !important;
+  text-align: center !important;
+  font-size: clamp(26px, 3vw, 38px) !important;
+  line-height: 1.18 !important;
+  font-weight: 800 !important;
+  color: #111827 !important;
+}
+
+.chart12-sub {
+  margin: 10px auto 0 !important;
+  max-width: 980px;
+  text-align: center !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  color: #4b5563 !important;
+}
+
+.chart12-map-section {
+  margin-top: 18px;
+}
+
+.chart12-map-title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #f28c45;
+}
+
+.chart12-map {
+  width: min(100%, 900px);
+  height: 420px;
+  margin: 0 auto;
+  border: 1px solid #f5d0b1;
+  background: linear-gradient(180deg, #fffdfa 0%, #fff7f1 100%);
+}
+
+.chart12-map .leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #fff7f1;
+}
+
+.chart12-map .leaflet-control-attribution {
+  background: rgba(255,255,255,.82) !important;
+  font-size: 11px;
+}
+
+.chart12-table-wrap {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.chart12-table {
+  width: 100%;
+  min-width: 1180px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.chart12-table th,
+.chart12-table td {
+  border-bottom: 1px solid #f0b085;
+  padding: 14px 14px;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #303846;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.chart12-table thead th {
+  color: #f28c45;
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  background: #fff7f1;
+  line-height: 1.35;
+}
+
+.chart12-table tbody td:first-child {
+  width: 8%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #232833;
+  vertical-align: middle;
+}
+
+.chart12-table tbody td:nth-child(2) {
+  width: 18%;
+  font-weight: 700;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #374151;
+}
+
+.chart12-table tbody td:nth-child(3) {
+  width: 31%;
+  text-align: left;
+}
+
+.chart12-table tbody td:nth-child(4) {
+  width: 28%;
+  text-align: left;
+}
+
+.chart12-table tbody td:nth-child(5) {
+  width: 15%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #374151;
+}
+
+.chart12-table tbody tr {
+  transition: background-color .16s ease, opacity .16s ease;
+}
+
+.chart12-table tbody.is-dimmed tr {
+  opacity: .45;
+}
+
+.chart12-table tbody tr.is-active {
+  opacity: 1 !important;
+  background: #fff6ef;
+}
+
+.chart12-question {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #4b5563 !important;
+  text-align: center !important;
+}
+
+.chart12-question b {
+  color: #111827;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .chart12-panel {
+    padding: 22px 14px 18px;
+  }
+
+  .chart12-panel h2 {
+    font-size: 24px !important;
+  }
+
+  .chart12-sub,
+  .chart12-question {
+    text-align: left !important;
+  }
+
+  .chart12-table {
+    min-width: 980px;
+  }
+
+  .chart12-map {
+    height: 320px;
+  }
+
+  .chart12-table th,
+  .chart12-table td {
+    padding: 10px 9px;
+    font-size: 12px;
+  }
+
+  .chart12-table thead th {
+    font-size: 15px;
+  }
+
+  .chart12-table tbody td:first-child {
+    font-size: 16px;
+  }
+}

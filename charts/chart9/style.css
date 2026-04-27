@@ -1,0 +1,154 @@
+/* ── Chart 9: Occupation Exposure Calculator ── */
+.chart9-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 48px 30px;
+  margin: 36px 0;
+  background:
+    radial-gradient(circle at 20% 35%, rgba(255,255,255,.04), transparent 24%),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,.035), transparent 28%),
+    linear-gradient(180deg, #284977 0%, #1f3d66 100%);
+  border-radius: 2px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.22);
+  color: #f4fbff;
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.chart9-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .20;
+  background-image:
+    linear-gradient(35deg, rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(0,0,0,.11) 1px, transparent 1px);
+  background-size: 17px 17px, 23px 23px;
+  mix-blend-mode: overlay;
+}
+.chart9-panel > * { position: relative; z-index: 1; }
+.chart9-top-line { height: 2px; background: rgba(230,248,255,.88); margin-bottom: 24px; }
+.chart9-panel h2 { margin: 0; font-size: clamp(24px, 2.8vw, 38px); line-height: 1.12; font-weight: 800; color: #f4fbff; }
+.chart9-sub { margin-top: 6px; color: rgba(244,251,255,.92); font-size: clamp(16px, 1.6vw, 24px); line-height: 1.35; font-weight: 400; }
+.chart9-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  margin-top: 18px;
+}
+.chart9-input {
+  width: 100%;
+  border: 1px solid rgba(220,245,255,.28);
+  background: rgba(255,255,255,.08);
+  color: #f4fbff;
+  padding: 14px 16px;
+  font-size: 15px;
+}
+.chart9-input::placeholder { color: rgba(244,251,255,.55); }
+.chart9-button,
+.chart9-chip {
+  border: 1px solid rgba(220,245,255,.28);
+  background: rgba(255,255,255,.08);
+  color: #f4fbff;
+  padding: 12px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.chart9-button:hover,
+.chart9-chip:hover { background: rgba(255,255,255,.14); }
+.chart9-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.chart9-result {
+  margin-top: 18px;
+  min-height: 150px;
+  border: 1px solid rgba(220,245,255,.24);
+  background: rgba(255,255,255,.05);
+  padding: 18px;
+}
+.chart9-result.is-empty {
+  display: flex;
+  align-items: center;
+  color: rgba(244,251,255,.72);
+}
+.chart9-result h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.chart9-meta {
+  margin-top: 6px;
+  color: rgba(244,251,255,.72);
+  font-size: 13px;
+}
+.chart9-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+.chart9-badge {
+  min-width: 120px;
+}
+.chart9-badge strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+}
+.chart9-badge span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: rgba(244,251,255,.72);
+}
+.chart9-bar {
+  margin-top: 16px;
+}
+.chart9-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(244,251,255,.82);
+  margin-bottom: 6px;
+}
+.chart9-track {
+  height: 10px;
+  background: rgba(255,255,255,.1);
+}
+.chart9-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8eddf2 0%, #ff8fab 100%);
+}
+.chart9-explainer {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(244,251,255,.84);
+}
+.chart9-suggestions {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(244,251,255,.84);
+}
+.chart9-suggestions button {
+  margin: 6px 8px 0 0;
+  border: 1px solid rgba(220,245,255,.24);
+  background: rgba(255,255,255,.06);
+  color: #f4fbff;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.chart9-question {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(244,251,255,.82);
+}
+.chart9-question b { font-weight: 800; }
+@media (max-width: 900px) {
+  .chart9-panel { padding: 24px 18px; }
+  .chart9-controls { grid-template-columns: 1fr; }
+}

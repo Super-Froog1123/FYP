@@ -1,0 +1,67 @@
+/* ── Chart 8: Student AI Usage Migration ── */
+.chart8-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 48px 30px;
+  margin: 36px 0;
+  background:
+    radial-gradient(circle at 20% 35%, rgba(255,255,255,.04), transparent 24%),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,.035), transparent 28%),
+    linear-gradient(180deg, #284977 0%, #1f3d66 100%);
+  border-radius: 2px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.22);
+  color: #f4fbff;
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.chart8-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .20;
+  background-image:
+    linear-gradient(35deg, rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(0,0,0,.11) 1px, transparent 1px);
+  background-size: 17px 17px, 23px 23px;
+  mix-blend-mode: overlay;
+}
+.chart8-panel > * {
+  position: relative;
+  z-index: 1;
+}
+.chart8-top-line {
+  height: 2px;
+  background: rgba(230,248,255,.88);
+  margin-bottom: 24px;
+}
+.chart8-panel h2 {
+  margin: 0;
+  font-size: clamp(24px, 2.8vw, 38px);
+  line-height: 1.12;
+  font-weight: 800;
+  color: #f4fbff;
+}
+.chart8-sub {
+  margin-top: 6px;
+  color: rgba(244,251,255,.92);
+  font-size: clamp(16px, 1.6vw, 24px);
+  line-height: 1.35;
+  font-weight: 400;
+}
+#chart8 {
+  height: 360px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 18px;
+}
+.chart8-question {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(244,251,255,.82);
+}
+.chart8-question b { font-weight: 800; }
+@media (max-width: 900px) {
+  .chart8-panel { padding: 24px 18px; }
+  #chart8 { height: 300px; }
+}

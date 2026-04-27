@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="utf-8" />
@@ -8,7 +8,7 @@
     content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
   />
 
-  <title>“龙虾"背后的AI焦虑症</title>
+  <title>"龙虾"背后的AI焦虑症</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@400;700&family=Roboto:wght@100;300;400;500;700"
     rel="stylesheet" />
@@ -18,6 +18,19 @@
   <link rel="stylesheet" type="text/css" href="css/article.css" />
   <link rel="stylesheet" type="text/css" href="css/components/network-graph.css" />
   <link rel="stylesheet" type="text/css" href="css/components/hx-pan.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart1/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart2/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart3/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart4/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart5/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart6/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart7/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart8/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart9/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart10/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart11/style.css" />
+  <link rel="stylesheet" type="text/css" href="charts/chart12/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" type="text/css" href="utils/scroll-bg-module/style.css" />
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -32,10 +45,12 @@
           <img class="story-cover-image" src="img/title.png" alt="" />
         </div>
 
-        <h1 id="maintitle">“龙虾"背后的AI焦虑症</h1>
+        <h1 id="maintitle">"龙虾"背后的AI焦虑症</h1>
 
         <div class="author story-author">
-          <h2>李奕君</h2>
+          <div class="story-byline">记者/编辑｜李奕君</div>
+          <div class="story-byline-meta">指导老师｜张引</div>
+          <div class="story-byline-meta">2026年4月27日</div>
         </div>
       </section>
 
@@ -52,12 +67,13 @@
             'img/scence4.png'
           ],
           contents: [
-            { text: '2026年3月的一个周末，深圳龙岗区某会议中心。</p><p>会场里坐无虚席，甚至国道都挤满了人。台上，演讲者头戴一顶红色龙虾帽，正在激情澎湃地讲述"如何用AI改变命运"。台下，观众们举着手机疯狂拍照，有人在做笔记，有人在录视频发朋友圈。</p><p>这不是什么追星现场，而是深圳"龙虾千人大会"的日常一幕。' },
-            { text: '此龙虾并非餐桌上的美味，而是一款名为OpenClaw的开源智能体软件（AI Agent），其图标酷似一只红色的龙虾而得名。本地电脑安装使用此软件，部署过程需要"喂算力"，操作复杂如同养殖，因此人们称之为"养龙虾"。</p><p>OpenClaw作为连接LLM大脑的桥梁，实现了集成工具调用（agent），社交媒体连接等功能，可以根据用户的自然指令在电脑上执行相关操作，被视作AI从"对话"走向"执行"的关键一步。' },
-            { text: '然而，越是狂热的追捧，越暴漏出人们心底的不安。</p><p>有人凌晨三点还在论坛里追问"龙虾配置参数"，害怕自己落后；有人花几万块租显卡，只为更快"养好一只龙虾"；有人辞掉了工作，押注这场技术革命带来的阶级跃迁。他们相信龙虾能改变命运——却很少有人敢问：如果龙虾真的能替代一切，那我们这些"养虾人"，又站在哪里？' },
-            { text: '会场的掌声再热烈，也盖不住哪个无人明说却人人感受到的问题：</p><p>这究竟是通往新世界的船票还是另一场被裹挟的焦虑？' }
+            { text: '2026年3月的一个周末，深圳龙岗区某会议中心。</p> <br> <p>会场里座无虚席，甚至过道都挤满了人。台上，演讲者头戴一顶红色龙虾帽，正在激情澎湃地讲述"如何用AI改变命运"。台下，观众们举着手机拍照，有人在做笔记，有人在录视频发朋友圈。</p>. <br> <p>这不是什么追星现场，而是深圳"龙虾千人大会"的日常一幕——只是这里追逐的，不是偶像，而是一种刚刚出现、又让人不敢错过的机会。' },
+            { text: '此龙虾并非餐桌上的美味，而是一款名为OpenClaw的开源智能体软件（AI Agent），其图标酷似一只红色的龙虾而得名。本地电脑安装使用此软件，部署过程需要"喂算力"，操作复杂如同养殖，因此人们称之为"养龙虾"。</p><p>在这样的热度之下，另一种情绪也开始变得明显。' },
+            { text: '有人凌晨三点还在论坛里追问"龙虾配置参数"，害怕自己落后；有人花几万块租显卡，只为更快"养好一只龙虾"；有人辞掉了工作，押注这场技术革命带来的阶级跃迁。他们相信龙虾能改变命运——却很少有人敢问：如果龙虾真的能替代一切，那我们这些"养虾人"，又站在哪里？' },
+            { text: '会场的掌声再热烈，也盖不住那个无人明说却人人感受到的问题：</p><p>这究竟是通往新世界的船票，还是一场被包装成机会的焦虑？' }
           ],
           options: {
+            minHeight: '120vh',
             cardBg: 'rgba(255,255,255,0.95)'
           }
         });
@@ -65,80 +81,259 @@
 
 
         <section class="text story-section">
-          <h2>焦虑的解剖</h2>
+          <h2>焦虑解剖</h2>
 
           <br /><br />
 
           <p>
-            深夜11点，张琳躺在床上刷手机，朋友圈里又有人转发了"AI即将取代这10种职业"的文章。这已经是她本周收藏的第十二篇类似文章。收藏，但从未真正读完。
+            会场之外，这种情绪并非只存在于"龙虾"人群之中。
           </p>
 
           <p>
-            她不是个例。在社交媒体的算法推荐下，一种叙事正在像病毒般蔓延——"AI正在重塑所有行业，如果你不学会使用AI，很快就会被时代淘汰。"
+            在社交媒体的信息流中，类似的内容几乎无处不在。"AI正在取代人类工作""不学AI就会被淘汰"的论调，被不断复制和放大。香港浸会大学大四学生吴思泽，就是这种叙事的长期接收者之一。
           </p>
 
           <p>
-            这种论调从朋友圈的转发文章，到短视频平台的"专家解读"，无一不在制造紧迫感。但真正值得关注的是这背后交织的两股恐惧。
+            令他印象最深刻的，是一张关于"AI取代各行业概率"的预测图。"除了服务业和医学，大部分行业都在50%以上，我们传媒专业也差不多。"他说，"虽然有点危言耸听，但还是会忍不住去看。"
           </p>
 
           <p>
-            社交平台上，AI焦虑呈现出两种截然不同却又相互交织的面貌。
+            与“是否真的被取代”不同，暴露度代表的是一个人日常接触AI、被提醒风险的频率。这种高频接触，会不断强化“我可能被替代”的认知，从而放大焦虑。
           </p>
 
-          <h2>FOMO（Fear of Missing Out）</h2>
+          <div class="chart6-panel">
+            <div class="chart6-top-line"></div>
+            <h2>"暴露度"解释了谁更容易焦虑。</h2>
+            <div class="chart6-sub">横轴是职业进入门槛的简化技能梯度，纵轴是 OpenAI 论文中的职业暴露度（beta），气泡大小代表美国 2024 年就业人数。</div>
+            <div id="chart6" style="height:520px;"></div>
+            <div class="chart6-question"><b>示例说明：</b>这里使用的是 OpenAI 论文中的 <i>human_rating_beta</i> 暴露评分，并结合职业数据做成解释性示例图。</div>
+          </div>
+
+          <div class="chart9-panel">
+            <div class="chart9-top-line"></div>
+            <h2>输入你的职业，查看 AI 暴露指数。</h2>
+            <div class="chart9-sub">输入中文或英文职业名，或试试下面的快捷按钮。结果展示的是任务暴露度，不是失业概率。</div>
+            <div class="chart9-controls">
+              <input id="job-search-input" class="chart9-input" type="text" list="job-title-list" placeholder="例如：作家、注册护士、木工" />
+              <datalist id="job-title-list"></datalist>
+              <button id="job-search-button" class="chart9-button" type="button">查看结果</button>
+            </div>
+            <div class="chart9-chips">
+              <button class="chart9-chip" type="button" data-job="Writers and Authors">作家</button>
+              <button class="chart9-chip" type="button" data-job="News Analysts, Reporters, and Journalists">记者</button>
+              <button class="chart9-chip" type="button" data-job="Registered Nurses">护士</button>
+              <button class="chart9-chip" type="button" data-job="Carpenters">木工</button>
+            </div>
+            <div id="job-search-result" class="chart9-result" aria-live="polite"></div>
+            <div class="chart9-question"><b>数据来源：</b>OpenAI 与宾州大学论文《GPTs are GPTs》公开职业表。</div>
+          </div>
+
+          <p>
+            这种叙事制造出一种典型的情绪——"不能错过"。
+          </p>
+
+          <p>
+            在朋友圈和短视频平台上，几乎所有人都在谈论AI、使用AI。有人展示用AI生成的内容，有人分享效率翻倍的经验。如果不跟上，仿佛就会被同龄人甩开。
+          </p>
+
+          <p>
+            这种焦虑往往转化为具体行为：不断点击新的AI工具，收藏大量教程，却很少真正深入；尝试一个又一个产品，但始终停留在"会用"的层面。
+          </p>
+
+          <p>
+            吴思泽也是如此。他接触过多种AI工具，从大模型到音声训练、图像生成，再到OpenClaw这样的智能体系统，但始终没有持续使用。"更多还是尝鲜，摸清大概能力就不怎么用了。"他说。
+          </p>
+
+          <p>
+            与"错过"的焦虑并行的，是另一种更直接的担忧——被取代。
+          </p>
+
+          <p>
+            "如果AI现在就能把工作做得更好，那我可能会直接失业。"他说。即便如此，他也清楚，AI正在成为一种新的竞争门槛，"不会用AI的话，和别人比还是吃亏的。"
+          </p>
+
+          <div class="chart4-panel">
+            <div class="chart4-top-line"></div>
+            <h2>数字劳动力的诱惑，来自人类产能的极限。</h2>
+            <div class="chart4-sub">微软 2025 年报告显示，企业一边要求更高生产率，一边又面对人类时间和精力的极限。</div>
+            <div id="chart4" style="height:340px;"></div>
+            <div class="chart4-stats">
+              <div class="chart4-stat"><div class="chart4-stat-value">48%</div><div class="chart4-stat-label">员工觉得工作"混乱且碎片化"</div></div>
+              <div class="chart4-stat"><div class="chart4-stat-value">52%</div><div class="chart4-stat-label">领导者也有同样感受</div></div>
+              <div class="chart4-stat"><div class="chart4-stat-value">275</div><div class="chart4-stat-label">员工日均被会议、邮件与消息打断次数</div></div>
+            </div>
+            <div class="chart4-question"><b>数据来源：</b>Microsoft Work Trend Index 2025, <i>The Year the Frontier Firm Is Born</i>.</div>
+          </div>
+
+          <div class="chart1-panel">
+            <div class="chart1-top-line"></div>
+            <h2>人工智能技能和数字化劳动力是最重要的劳动力战略</h2>
+            <div class="chart1-sub">调查问题：在您考虑人工智能和智能体在劳动力和人才管理中的作用时，您的团队或组织在未来12-18个月内正在考虑哪些策略？</div>
+            <div class="chart1-figure">
+              <div id="chart1" style="height:420px;"></div>
+            </div>
+            <div class="chart1-question"><b>数据来源：</b>Microsoft Work Trend Index 2025, The Year the Frontier Firm Is Born.</div>
+          </div>
+
+          <p>
+            但这种焦虑，在不同位置的人眼中，呈现出另一种解释。
+          </p>
+
+          <p>
+            同样毕业于香港浸会大学的创业者袁琳，给出了更为辩证的判断。他创办的V0.AI作为网页Agent应用已完成天使轮融资，用户覆盖100多个国家。
+          </p>
+
+          <p>
+            在他看来，"养龙虾"并不是焦虑的来源。
+          </p>
+
+          <p>
+            "焦虑每个时代都有。"他说，"龙虾只是一个被放大的载体。"
+          </p>
+
+          <p>
+            换句话说，真正驱动这种情绪的，并不是某一个具体工具，而是技术更替中反复出现的那种不确定性——当旧的路径开始失效，而新的路径尚未稳定，人们便本能地寻找一个可以抓住的"入口"。
+          </p>
+
+          <p>
+            而"龙虾"，恰好填补了这个位置。
+          </p>
+
+          <h2 class="story-subtitle">AI依赖</h2>
 
           <br /><br />
 
           <p>
-            朋友圈里，人人都在讨论AI、使用AI。有人晒出用ChatGPT写的文章，有人展示AI生成的精美图片，还有人分享"我用AI一小时完成了一天的工作"。如果你不跟上，仿佛就会被同龄人甩开。
+            比起表层的焦虑情绪，更值得关注的，是人们与AI关系的变化。
           </p>
 
           <p>
-            这种焦虑催生了特定行为：看到"AI一键生成XX"的标题就忍不住点击，生怕错过某个"革命性工具"；收藏了无数AI教程，报名了各种AI课程，却从未真正学完一个；手机里装了十几个AI应用，打开率最高的却永远是那一个。
+            来自 China Youth Daily 与 Soul 联合发布的《2025年大学生AI使用心态洞察报告》显示，65.9%的大学生在遇到问题时，第一反应是求助AI。
           </p>
 
           <p>
-            "就像朋友圈都在学游泳，而你还站在岸上。"一位互联网从业者这样形容，"你不知道水里到底有多深，但你确定自己不想溺水。"
+            这个变化的关键，不在于"使用AI"，而在于"第一反应"的转移——从主动搜索、筛选和判断信息，到直接获得一个已经整理好的答案。信息获取的路径，正在从"多源筛选"，转向"一步到位"。
           </p>
 
-          <h2>FOBO（Fear of Being Obsolete）</h2>
+          <div class="chart8-panel">
+            <div class="chart8-top-line"></div>
+            <h2>对大学生来说，AI 已经不只是一种工具</h2>
+            <div class="chart8-sub">当 65.9% 的受访者在遇到问题时第一反应是求助 AI，这种依赖已经渗入学习、专业判断，甚至情绪调节。</div>
+            <div class="chart8-layout">
+              <div id="chart8"></div>
+              <div class="chart8-callouts">
+                <div class="chart8-callout"><div class="chart8-value">65.9%</div><div class="chart8-label">遇到问题时第一反应求助 AI</div></div>
+                <div class="chart8-callout"><div class="chart8-value">58.1%</div><div class="chart8-label">用于学术或专业咨询</div></div>
+                <div class="chart8-callout"><div class="chart8-value">45.3%</div><div class="chart8-label">用于情感陪伴或解压</div></div>
+              </div>
+            </div>
+            <div class="chart8-question"><b>数据来源：</b>《2025年大学生AI使用心态洞察报告》</div>
+          </div>
+
+          <p>
+            这种依赖很快从"查资料"扩展到更多层面。同一份报告显示，58.1%的受访大学生会将AI用于学术或专业咨询，45.3%会用于情感陪伴或解压。AI开始同时介入知识获取与情绪调节，从工具逐渐演变为一种"生活接口"。
+          </p>
+
+          <p>
+            在组织层面，这种趋势也在被进一步强化。微软的研究显示，超过80%的企业领导者计划在未来一年内将Agent纳入核心战略，用以扩展团队能力。换言之，不只是个人在依赖AI，组织本身也在推动这种依赖成为常态。
+          </p>
+        </section>
+
+        <section class="story-section story-chart-section story-chart-section-wide">
+          <div class="chart2-panel">
+            <h2>员工们会求助于人工智能来做人类无法做的事情</h2>
+            <div class="chart2-sub">调查结果显示，人们使用人工智能更多是看重其独特的功能，而不是看重它比同事带来的好处。</div>
+            <div class="chart2-layout">
+              <div id="chart2"></div>
+              <div class="chart2-callouts">
+                <div class="callout-group">
+                  <div class="callout-title">最常见的原因</div>
+                  <div class="callout callout-0" data-chart-index="0"><div class="pct">42%</div><div><div class="clabel">全天候可用</div><div class="cnote">AI 可以 24 小时随时响应</div></div></div>
+                  <div class="callout callout-1" data-chart-index="1"><div class="pct">30%</div><div><div class="clabel">机器速度与质量</div><div class="cnote">AI 完成任务更快，或输出质量更高</div></div></div>
+                  <div class="callout callout-2" data-chart-index="2"><div class="pct">28%</div><div><div class="clabel">随叫随到的创意来源</div><div class="cnote">AI 能提供更多新点子或创意方案</div></div></div>
+                  <div class="callout callout-3" data-chart-index="3"><div class="pct">23%</div><div><div class="clabel">近乎无限的处理容量</div><div class="cnote">AI 对重复或复杂任务有几乎无限的时间和精力</div></div></div>
+                </div>
+                <div class="callout-group">
+                  <div class="callout-title">最少见的原因</div>
+                  <div class="callout callout-4" data-chart-index="4"><div class="pct">17%</div><div><div class="clabel">害怕被人评判</div><div class="cnote">AI 更私密，也不会对我指指点点</div></div></div>
+                  <div class="callout callout-5" data-chart-index="5"><div class="pct">16%</div><div><div class="clabel">与同事协作的摩擦</div><div class="cnote">AI 不会不耐烦，也不会表现出挫败感</div></div></div>
+                  <div class="callout callout-6" data-chart-index="6"><div class="pct">15%</div><div><div class="clabel">与同事合作的沟通成本</div><div class="cnote">AI 需要的解释更少，不必手把手带</div></div></div>
+                  <div class="callout callout-7" data-chart-index="7"><div class="pct">8%</div><div><div class="clabel">独占功劳</div><div class="cnote">这样完成的工作可以完全算在自己头上</div></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="chart2-question"><b>数据来源：</b>Microsoft Work Trend Index 2025, The Year the Frontier Firm Is Born.</div>
+          </div>
+        </section>
+
+        <section class="text story-section">
+          <p>
+            这也解释了一个看似矛盾的现象：人们一边对AI感到焦虑，一边又越来越离不开它。当"向AI求助"成为第一反应，当效率压力不断上升，人们需要的，已经不只是理解AI，而是一个可以随时调用、能够直接替自己行动的工具。
+          </p>
+
+          <h2 class="story-subtitle">为什么是龙虾？</h2>
 
           <br /><br />
 
           <p>
-            与错失恐惧不同，被淘汰恐惧指向的是一个更根本的问题：当AI能做的事情越来越多，我还有什么价值？
+            那么问题变成：当人们需要一个"可以直接行动"的工具时，为什么是OpenClaw这样的智能体？
           </p>
 
           <p>
-            一位从事文案工作五年的编辑告诉笔者，自从ChatGPT横空出世，她就开始失眠。"AI写的文案，比我写的快，比我写得好，还不会累。那我存在的意义是什么？"
+            在技术层面，它所代表的，并不只是"更强的AI"，而是一种不同的结构。
           </p>
 
           <p>
-            这不仅仅是职业技能的焦虑，而是对身份认同的危机——当"我会做什么"不再定义"我是谁"，人们便陷入了存在主义的困境。
+            计算机科学研究者麻时钞指出，OpenClaw本质上是一个将大语言模型转化为"可调用工具、可执行工作流"的平台。它不再停留在对话层，而是通过三层结构运行：上层接收用户指令，中层负责任务编排与决策，下层调用具体工具执行操作。
           </p>
 
           <p>
-            社交媒体的算法推荐机制放大了这两种恐惧。你越关注AI相关内容，平台就越推送相关内容，形成一个"人人都在用AI、AI正在取代一切"的信息茧房。
-          </p>
-
-          <h2 class="story-subtitle">数据背后：依赖正在形成</h2>
-
-          <br /><br />
-
-          <p>
-            比起表层的焦虑情绪，更值得关注的，是AI正在重塑人们解决问题的方式。来自 China Youth Daily 与 Soul 联合发布的一项大学生AI使用报告显示，65.9%的大学生在遇到问题时，第一反应是求助AI。
+            换句话说，它不只是"告诉你怎么做"，而是"直接帮你去做"。
           </p>
 
           <p>
-            这个数据的关键，不在于“使用AI"，而在于“第一反应"的转移。二十年前，人们会打开搜索引擎，在海量信息中筛选、比对和判断；十年前，人们更多转向社区平台，通过阅读不同观点来形成自己的理解；而今天，越来越多的人选择直接向AI提问，并获得一个已经整理好的答案。信息获取的路径，从“多源筛选"，演变为“一步到位"。
+            这种变化，在具体场景中体现得尤为明显。比如，一个传统流程中需要多个步骤完成的任务——整理会议录音、提取重点、生成行动清单、再同步到日程或文档——过去往往需要在不同软件之间反复切换。而在智能体框架下，这些步骤可以被压缩为一条连续执行的指令，由系统自动完成。
           </p>
 
           <p>
-            表面上，这是效率的跃迁，但更深层的变化正在发生：当答案变得过于容易获得，提问本身的能力却在悄然萎缩。一位高校教师提到，学生提交的作业越来越“完美"，但在面对开放性问题时反应却越来越迟钝——他们习惯于从AI那里获取答案，却不再习惯自己提出问题。
+            为了支撑这种能力，OpenClaw内部引入了一系列机制：
+            "Skills"用于引导模型在何时调用工具；
+            "Heartbeat"让系统周期性运行，主动发现待处理任务；
+            "Memory"则以文本形式记录信息，作为长期上下文持续参与决策。
           </p>
 
           <p>
-            与此同时，AI的角色也在悄然扩展。它不再只是信息工具，还被用于优化沟通、缓解情绪，甚至成为某种“对话对象"。有人借助AI生成社交话题，缓解交流焦虑；有人在虚拟对话中倾诉压力；也有人在AI辅助下完成写作、设计与编程。AI正从工具滑向伙伴，而这种关系的转变，正是依赖开始形成的信号。
+            这些设计的共同目标，是让AI从"回答问题"，转向"执行流程"。
+          </p>
+
+          <p>
+            也正因如此，它所提供的，并不仅是信息，而是行动本身。
+          </p>
+        </section>
+
+        <section class="story-section story-chart-section">
+          <div class="chart5-panel">
+            <div class="chart5-top-line"></div>
+            <h2>OpenClaw 落在哪个 AI 热词簇里？</h2>
+            <div class="chart5-sub"> AI 热词关系网络图。</div>
+            <div class="chart5-legend">
+              <span><i class="chip tech"></i>核心技术层</span>
+              <span><i class="chip product"></i>产品工具层</span>
+              <span><i class="chip business"></i>商业应用层</span>
+              <span><i class="chip social"></i>社会情绪层</span>
+            </div>
+            <div id="chart5" style="height:620px;"></div>
+            <div class="chart5-question"><b>示例说明：</b>OpenClaw 靠近 AI 智能体、工具调用、MCP、本地部署、自动化与数字劳动力，同时又连向更外层的社会情绪。</div>
+          </div>
+        </section>
+
+        <section class="text story-section">
+          <p>
+            袁琳看来，OpenClaw并不只是一个"智能体工具"，而更接近一种新的运行时（runtime）——它把原本需要人工分步完成的流程，压缩成一条可以持续运行的链路。
+          </p>
+
+          <p>
+            它的爆火，并不完全源于能力的跃迁，而在于一种使用方式的改变——从"问答案"，到"让系统替你完成一整件事"。
           </p>
 
         </section>
@@ -149,66 +344,241 @@
           <br /><br />
 
           <p>
-            与每一轮技术浪潮相似，最先捕捉到机会的，往往不是使用技术的人，而是围绕技术提供服务的“卖铲人"。围绕“养龙虾"，一条完整的商业链条正在迅速成型：在电商平台上，“OpenClaw代安装"等服务大量出现，一些原本从事IT运维的从业者，将其发展为新的收入来源；更进一步，有人开始提供“硬件+部署+培训"的全套方案，价格动辄数千元，甚至出现了贴牌销售的“AI主机"。与此同时，在知识付费领域，“养虾教程"“AI自动化课程"等内容也迅速走红，形成了另一层变现路径。
+            当焦虑成为普遍情绪，它也迅速被转化为可售卖的产品。
           </p>
 
-          <h2 class="story-subtitle">大厂的跟进</h2>
+          <p>
+            与每一轮技术浪潮相似，最先捕捉机会的，往往不是技术的最终使用者，而是围绕技术提供服务的"卖铲人"。
+          </p>
+
+          <p>
+            围绕"养龙虾"，一条完整的商业链条正在迅速成型。从电商平台上的"代安装"服务，到"硬件+部署+培训"的打包方案，再到各类"养虾教程""AI自动化课程"，不同层级的变现路径正在被快速构建。
+          </p>
+        </section>
+
+        <section class="story-section story-chart-section story-chart-section-wide">
+          <div class="chart10-panel">
+            <div class="chart10-top-line"></div>
+            <h2>从"试用一下"到"养成工作流"，成本曲线为什么会突然变陡？</h2>
+            <div class="chart10-sub">当用户从单次提问，走向多步工作流，再走向持续运行的 Agent 循环，Token 消耗和成本会被一层层放大。</div>
+            <div class="chart10-scrolly">
+              <div class="chart10-sticky">
+                <div id="chart10" style="height:420px;"></div>
+                <div class="chart10-note">计算口径：累计 Token(d) = 日均 Token × d；累计成本(d) = 累计 Token(d) ÷ 1,000,000 × 1.84 美元。这里直接采用 OpenAI 公布的 GPT-4.1 blended pricing（$1.84 / 1M tokens）。</div>
+              </div>
+              <div class="chart10-steps">
+                <div class="chart10-step is-active" data-stage="0">
+                  <div class="chart10-step-title">阶段 1：偶尔问一句</div>
+                  <p>假设日均消耗 12.5k tokens，相当于 30 天累计 375k tokens。用户把 AI 当成搜索替代品，一天只问几次，调用频率低、上下文短，成本大体可控。</p>
+                </div>
+                <div class="chart10-step" data-stage="1">
+                  <div class="chart10-step-title">阶段 2：接进多步工作流</div>
+                  <p>假设日均消耗 55k tokens，相当于 30 天累计 1.65M tokens。一旦开始让 AI 连续处理检索、摘要、改写、格式化等步骤，调用次数和上下文长度会一起抬升。</p>
+                </div>
+                <div class="chart10-step" data-stage="2">
+                  <div class="chart10-step-title">阶段 3：让 Agent 持续跑</div>
+                  <p>假设日均消耗约 592.7k tokens，相当于 30 天累计 17.78M tokens。如果再叠加心跳轮询、循环调用、失败重试与长上下文记忆，账单增长就会从“多一点”变成“陡很多”。</p>
+                </div>
+              </div>
+            </div>
+            <div class="chart10-question"><b>计算公式：</b>累计成本 = 累计 Token ÷ 1,000,000 × 1.84 美元。<br><b>阶段假设：</b>阶段 1 为 12.5k tokens/日，阶段 2 为 55k tokens/日，阶段 3 为 592.7k tokens/日。<br><b>依据说明：</b>OpenAI 在《Introducing GPT-4.1 in the API》中给出 GPT-4.1 的 blended pricing 为 $1.84 / 1M tokens；该价格基于“typical input/output and cache ratios”。本图直接采用官方 blended pricing 换算，不再自行拆分 input、cached input、output 权重；三阶段 Token 用量仍为情境假设，用于展示工作流复杂度上升时的成本斜率变化。<br><b>数据来源：</b>OpenAI《Introducing GPT-4.1 in the API》与 OpenAI API Pricing 页面。</div>
+          </div>
+        </section>
+
+        <section class="text story-section">
+          <p>
+            类似的分工，也出现在企业层面。微软报告显示，78%的领导者正在考虑招聘AI专属岗位，在前沿企业中这一比例达到95%。AI Agent Specialist已进入未来重点招聘名单。
+          </p>
+
+          <div class="role-table-card">
+            <div class="role-table-title">未来12-18个月企业优先考虑的 AI 新岗位</div>
+            <table class="role-table">
+              <thead><tr><th>岗位</th><th>占比</th></tr></thead>
+              <tbody>
+                <tr><td>AI 培训师（AI Trainer）</td><td>32%</td></tr>
+                <tr><td>AI 数据专家（AI Data Specialist）</td><td>32%</td></tr>
+                <tr><td>AI 安全专家（AI Security Specialist）</td><td>31%</td></tr>
+                <tr><td>AI Agent 专家（AI Agent Specialist）</td><td>30%</td></tr>
+                <tr><td>AI 投资回报分析师（AI ROI Analyst）</td><td>29%</td></tr>
+              </tbody>
+            </table>
+            <div class="role-table-source">来源：Microsoft Work Trend Index 2025.</div>
+          </div>
+
+          <p>
+            从个人到组织，围绕AI的"使用门槛"，正在被系统性地外包。
+          </p>
+
+          <h2 class="story-subtitle">政策变动</h2>
 
           <br /><br />
 
           <p>
-            这种现象的背后，也与厂商之间的竞争密切相关。以腾讯为代表的互联网公司，正在加速布局AI代理系统，并尝试将类似能力整合进微信、QQ等产品之中；其他公司亦在同步推进，竞争不断加剧。腾讯云开发者AI产品负责人丁宁（Dino）在香港浸会大学的一次讲座中，以腾讯CodeBuddy产品序列为案例，分享了AI Coding的发展与落地——当大厂的产品经理坐下来谈AI时，他们看到的图景，与社交媒体上的狂热叙事并不相同。
+            这种狂热并非无缘无据。在深圳龙岗，AI 不再只是实验室里的代码，而是一个城区全速运转的"操作系统"。2026年3月初，龙岗区发布了备受瞩目的《支持 OpenClaw 与 OPC 发展的若干措施》（简称"龙虾十条"），试图通过政务层面的"All in AI"战略，将龙岗打造为全球 AI 智能体应用的"首发地"。
           </p>
 
           <p>
-            对于OpenClaw这类开源智能体产品，丁宁的态度出乎意料地冷静。他首先指出，OpenClaw是一个第三方开源项目，而非成熟的产品——"因为它有可能权限无限大，所以你最重要的是要有足够的能力或者企业帮你把这个项目变成一个在安全的前提下帮你本地部署起来。这是前提。"至于使用心态，他主张"平常心"——用得上就用，用不上也不必刻意，不必被焦虑裹挟。
+            政策的力度令人咋舌：不仅在全区推广建立"龙虾服务区"，提供零成本的 OpenClaw 部署服务，甚至对在国际开源社区贡献关键技能包的开发者，给出最高200万元的现金补贴。在这个号称"全国工业百强区七连冠"的腹地，政府正试图用公共数据开放、算力补贴和"OpenClaw 数字员工应用券"，将那只红色龙虾从极客手中的玩具，变为工厂流水线和写字楼里的生产力引擎。官方的下场背书，无疑给会场里那些辞掉工作、押注龙虾的"养虾人"们注入了一剂强心针，也让这场技术的阶级跃迁赛，蒙上了一层官方叙事的金边。
+          </p>
+        </section>
+
+        <section class="story-section story-chart-section story-chart-section-wide">
+          <div class="chart11-panel">
+            <div class="chart11-top-line"></div>
+            <h2>"龙虾十条"落在地图上，意味着什么？</h2>
+            <div class="chart11-sub">这张专题地图把龙岗政策覆盖区、两处免费部署点和公开提到的 AI 产业节点放在一起。</div>
+            <div class="chart11-layout">
+              <div id="chart11-map"></div>
+              <div class="chart11-sidebar" id="chart11-sidebar">
+                <div class="chart11-card is-active" data-site="龙岗政策覆盖区"><div class="chart11-card-type">政策范围</div><div class="chart11-card-title">龙岗区"龙虾十条"覆盖区</div><div class="chart11-card-body">以龙岗全区为政策主场，重点串联智能体、机器人与本地部署场景。</div></div>
+                <div class="chart11-card" data-site="全球首家人工智能6S店"><div class="chart11-card-type">免费部署点</div><div class="chart11-card-title">全球首家人工智能 6S 店</div><div class="chart11-card-body">官方公告中的首个免费部署点，位于坂田街道。</div></div>
+                <div class="chart11-card" data-site="粤港澳超高清数创产业园"><div class="chart11-card-type">免费部署点</div><div class="chart11-card-title">粤港澳超高清数创产业园</div><div class="chart11-card-body">官方公告中的第二个免费部署点，位于龙城街道。</div></div>
+                <div class="chart11-card" data-site="大运AI小镇"><div class="chart11-card-type">园区节点</div><div class="chart11-card-title">大运 AI 小镇</div><div class="chart11-card-body">龙岗公开定位的人工智能全产业链园区。</div></div>
+                <div class="chart11-card" data-site="创投·模力谷AI生态社区"><div class="chart11-card-type">园区节点</div><div class="chart11-card-title">创投·模力谷 AI 生态社区</div><div class="chart11-card-body">强调创新创业孵化、资本与产业资源聚合。</div></div>
+                <div class="chart11-card" data-site="湾区未来科技园"><div class="chart11-card-type">园区节点</div><div class="chart11-card-title">湾区未来科技园</div><div class="chart11-card-body">体现龙岗对"AI+具体行业"的政策落点。</div></div>
+              </div>
+            </div>
+            <div class="chart11-question"><b>图注：</b>地图点位依据公开报道中的园区名称、街道或地址做近似落点。</div>
+          </div>
+        </section>
+
+        <section class="story-section story-chart-section story-chart-section-wide">
+          <div class="chart12-panel">
+            <div class="chart12-top-line"></div>
+            <h2>中国部分地区政务系统接入 OpenClaw 进展梳理</h2>
+            <div class="chart12-sub">下表按省市、部门、部署情况、应用场景与应用类型梳理公开语境中的典型接入方向，版式参照你给的示意图做成独立信息卡。</div>
+            <div class="chart12-map-section">
+              <div class="chart12-map-title">省市分布示意</div>
+              <div id="chart12-map" class="chart12-map" aria-label="OpenClaw 政务接入省市分布示意图"></div>
+            </div>
+            <div class="chart12-table-wrap">
+              <table class="chart12-table">
+                <thead>
+                  <tr>
+                    <th>省/市</th>
+                    <th>政府部门</th>
+                    <th>OpenClaw 部署情况</th>
+                    <th>应用场景</th>
+                    <th>应用类型</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-region="北京">
+                    <td rowspan="2">北京</td>
+                    <td>北京市政务服务管理局</td>
+                    <td>已完成基于 OpenClaw 框架的政务服务 Agent 私有化本地部署，全适配国产信创环境</td>
+                    <td>整合 12345 热线知识库、自动解答企业群众办事咨询，辅助接线员生成标准答复话术</td>
+                    <td>政务服务助手</td>
+                  </tr>
+                  <tr data-region="北京">
+                    <td>中关村科学城管理委员会</td>
+                    <td>基于 OpenClaw 低代码开发框架完成招商智能 Agent 适配开发</td>
+                    <td>自动生成招商项目分析报告，提供企业落地政策咨询，对接园区入驻配套资源</td>
+                    <td>招商智能辅助</td>
+                  </tr>
+                  <tr data-region="浙江">
+                    <td rowspan="2">浙江</td>
+                    <td>省数据管理局</td>
+                    <td>完成全参数优化版 OpenClaw 政务定制版，在“浙里办”平台本地化部署</td>
+                    <td>辅助政务公文起草、政策文件解读、跨部门协同办公，提升机关内部办公效率</td>
+                    <td>智能办公</td>
+                  </tr>
+                  <tr data-region="浙江">
+                    <td>杭州市上城区政务服务中心</td>
+                    <td>基于 OpenClaw 开发“政务帮办 Agent”，完成全场景上线，适配窗口与移动端双端</td>
+                    <td>为办事群众提供全程导办、材料预审、办理进度查询，辅助窗口人员减负提效</td>
+                    <td>智能导办帮办</td>
+                  </tr>
+                  <tr data-region="广东">
+                    <td rowspan="2">广东</td>
+                    <td>省商务厅</td>
+                    <td>“粤商通”平台全面接入基于 OpenClaw 开发的外贸服务智能助手，适配跨境业务规则</td>
+                    <td>自动解答外贸企业政策咨询、生成报关流程指引、预警跨境贸易合规风险</td>
+                    <td>企业服务</td>
+                  </tr>
+                  <tr data-region="广东">
+                    <td>深圳市政务服务数据管理局</td>
+                    <td>完成 OpenClaw 框架移动适配，开发移动端政务智能助手</td>
+                    <td>市民可通过粤省事/微信端随时调用 Agent 办理查询、预约、投诉等业务，实现“随时办随身办”</td>
+                    <td>移动政务助手</td>
+                  </tr>
+                  <tr data-region="四川">
+                    <td rowspan="2">四川</td>
+                    <td>成都市大数据集团</td>
+                    <td>完成信创环境下 OpenClaw 全尺寸模型本地化部署，落地成都智慧政务平台</td>
+                    <td>辅助 12345 热线诉求智能分类、自动转办对应部门、生成每周热点诉求分析报告</td>
+                    <td>诉求智能分拨</td>
+                  </tr>
+                  <tr data-region="四川">
+                    <td>四川天府新区管委会</td>
+                    <td>基于 OpenClaw 开发的项目审批智能助手完成测试上线</td>
+                    <td>自动预审项目申报材料、识别填报错误、解答审批流程疑问，压缩项目审批时长</td>
+                    <td>智能审批</td>
+                  </tr>
+                  <tr data-region="山东">
+                    <td>山东</td>
+                    <td>青岛市政务服务和数据管理局</td>
+                    <td>完成 OpenClaw 大模型政务定制版适配部署，推出“青岛政务智帮办”</td>
+                    <td>支持社保、医保、公积金等高频民生业务的智能咨询、材料填报指导</td>
+                    <td>便民服务助手</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="chart12-question"><b>资料来源：</b>iMedia Research（艾媒咨询）整理。<br><b>说明：</b>该图卡为新闻版式复刻示意，条目文字按你提供的截图信息进行结构化重排。</div>
+          </div>
+        </section>
+
+        <section class="text story-section">
+          <p>
+            随着"龙虾"在民间与企业的野蛮生长，象征着机会的红色，正逐渐带上监管警告的意味。2026年3月，中国国家互联网应急中心（CNCERT）针对 OpenClaw 正式发布风险提示，直指其默认安全配置的"脆弱性"。官方通报指出，由于智能体具备读写文件与自动执行指令的最高权限，一旦沙盒机制失位，攻击者可通过"指令诱导"（Prompt Injection）直接接管系统，甚至在工业场景中导致产线失控或核心设计文件外泄。
           </p>
 
           <p>
-            同一所大学的课堂上，计算机科学系讲师麻時鈔博士（Dr. Shichao Ma）则从技术架构的层面，揭示了"龙虾"更底层的运作逻辑：OpenClaw本质上是一个将大语言模型转化为"可调用工具、可执行工作流"的智能体平台，由对话界面层、编排层和执行层三层架构构成，并依托Skills（技能引导）、Heartbeat（心跳轮询）与Memory（Markdown明文记忆）等核心机制运行。然而，正是这些机制，埋下了安全与成本的隐患——沙盒失效、提示注入、明文泄露密钥、Token开销悄然攀升。
-          </p>
-
-          <p>
-            一位大厂产品经理呼吁"平常心"，一位计算机学者警告"沙盒可能失效"——两种声音指向同一个结论：在热潮中保持清醒，比追风口更重要。
-          </p>
-
-          <p>
-            然而，在热潮之下，成本结构同样在悄然转移。运行智能体系统需要持续的计算资源支持，尤其是在使用高性能模型时，费用会显著上升。有数据显示，在高频使用场景中，每月成本可能达到数百美元。由此形成一种典型结构：平台与技术提供方获取收益，而普通用户则在不知不觉中承担起持续的使用成本。
-          </p>
-
-          <h2 class="story-subtitle">"龙虾十条"与产业野心</h2>
-
-          <br /><br />
-
-          <p>
-            面对这波风潮，深圳政府选择了主动拥抱。
-          </p>
-
-          <p>
-            2026年3月，深圳龙岗区推出"龙虾十条"产业政策，涵盖资金补贴、场地支持、人才培养等多个维度。其中，最高补贴金额达500万元。
-          </p>
-
-          <p>
-            政府的逻辑很清晰：与其让这波风潮无序发展，不如将其引导成为真正的产业动力。OPC（One Person Company，一人公司）创业生态，成为深圳押注的新方向。
+            这种担忧已迅速转化为行政侧的"紧急刹车"。据了解，包括金融机构、国有企业及政府机关在内的核心部门，已明确限制在办公设备上部署此类开源智能体软件。与此同时，国家网信办等五部门联合发布的《人工智能拟人化互动服务管理暂行办法》也为"养虾人"划定了法律边界：任何具备自主执行能力的智能体，不仅需要履行算法备案，更必须在执行任务时具备显著的"AI身份标识"。从"技术尝鲜"到"合规深水区"，政策红线的收紧正向所有人传递一个明确信号：在智能体走向物理世界执行任务的"十五五"开局之年，安全与合规，已成为比 Token 消耗更昂贵的入场券。
           </p>
 
         </section>
 
         <section class="text story-section">
-          <h2 class="story-subtitle">冷静！"为焦虑买单"的代价</h2>
+          <h2 class="story-subtitle">为焦虑买单的代价</h2>
 
           <br /><br />
 
           <p>
-            麻時鈔博士的警告更为具体。他指出，OpenClaw可以执行命令、编辑文件、自动化浏览器操作——"如果沙盒机制薄弱或被禁用，错误可能直接影响真实机器和账户"；若代理读取了不受信任的内容，该内容可能操纵模型以不安全的方式调用工具或泄露数据；记忆以Markdown明文存储在工作空间中，日志和上下文可能意外引入用户不希望代理暴露的文件、笔记或密钥；而频繁的心跳运行、大量上下文加载与工具循环调用，更可能"悄无声息地推高Token开销和延迟"。
+            麻時鈔博士的警告更为具体，也更接近现实的边界。
           </p>
 
           <p>
-            结果往往是：花了几百块安装，又花了数百块API费用，最后发现"并没有什么实际用途"，只能闲置——甚至可能因为安全配置不当而付出更大代价。
+            在他的描述中，OpenClaw并不是一个"无害的效率工具"，而是一个可以直接介入系统层面的执行体：它能够运行命令、修改文件、自动操作浏览器。如果沙盒机制不完善，或者被用户主动关闭，一次错误的调用，影响的就不再是一个对话窗口，而是整台机器乃至关联账户。
           </p>
 
           <p>
-            "不要因为焦虑而养虾，要因为'想偷懒'且'养得起'而养虾。"——某技术博主
+            风险并不总以"出错"的形式出现。更常见的，是在看似正常的运行中悄然累积。
+          </p>
+
+          <p>
+            例如，当代理读取了不受信任的网页内容，这些内容本身就可能被设计成"诱导模型执行特定操作"的提示；又或者，Memory模块以Markdown明文形式存储在本地工作空间，日志与上下文在调用过程中不断被引入，用户并不总能意识到哪些信息已经被模型"看见"。与此同时，频繁的心跳轮询、长上下文加载与多轮工具调用，会在后台持续消耗Token——成本不是一次性发生，而是在每一次"正常使用"中被放大。
+          </p>
+
+          <p>
+            最终形成的，是一种典型但少被意识到的使用轨迹：前期投入时间与金钱完成部署，中期频繁尝试各种场景，后期逐渐减少使用频率，直到系统被闲置在电脑的一角。看似是"没有用好工具"，但更深层的问题在于——这个工具从一开始，就未必对应一个真实存在的需求。
+          </p>
+
+          <p>
+            袁琳将这种状态概括为一种更隐蔽的焦虑形式——"Token焦虑"。
+          </p>
+
+          <p>
+            "有人会因为当天Token消耗超标而睡不着。"他说，"但如果你真的有业务场景，谁会在意用了多少Token？哪怕1万个Token能解决问题，那就是合理成本。相反，如果场景本身是假的，你就算每天消耗再多，也只是放大焦虑。"
+          </p>
+
+          <p>
+            换句话说，人们真正付出的，并不只是金钱成本，还有时间、注意力，以及对"必须跟上"的持续心理负担。
+          </p>
+
+          <p>
+            焦虑并没有被解决，只是被转化为另一种可以计费的形式。
           </p>
 
           <h2 class="story-subtitle">当龙虾褪去光环</h2>
@@ -216,24 +586,78 @@
           <br /><br />
 
           <p>
-            技术革命从来不只是技术本身。它总是伴随着新的生意、新的投机、新的社会心理现象。"养龙虾"风潮，折射出的是这个时代的集体焦虑——对未来的不确定，对被淘汰的恐惧，对"做点什么"的迫切需求。
+            技术浪潮从来不只关乎技术本身。它总是伴随着新的生意模式、新的投机空间，以及新的集体心理。
           </p>
 
           <p>
-            但焦虑本身并不是问题。问题是，当焦虑成为被收割的筹码，谁来为这场狂欢买单？
+            "养龙虾"的流行，正是这种复杂结构的一个切面。它既是工具，也是符号——象征着效率、机会，以及某种不愿被时代抛下的努力。
           </p>
 
           <p>
-            丁宁的判断更为根本。他指出，当AI工具发展到能够处理文案、搜索、调研等操作层面的工作时，"这些operation level（操作层面）的工作，你不用再去做了"——不是因为AI没用，而是因为当人人都会用时，它就不再是"竞争优势"，而只是"基础设施"。
+            但当热度逐渐褪去，一个更现实的问题开始浮现：当人人都可以使用同样的工具，真正的差异还剩下什么？
           </p>
 
           <p>
-            到那时，真正的问题才会浮现：当AI工具变得人人可用时，你的竞争力在哪里？
+            丁宁将这个变化归结为"operation level"的压缩。GitHub Copilot的一项受控实验显示，在完成同一项JavaScript HTTP server编码任务时，使用AI辅助的开发者完成速度比对照组快55.8%。这并不意味着开发者被替代，但它说明了一点：那些可以被拆分、标准化、重复执行的操作，正在被系统性压缩。
+          </p>
+
+          <div class="chart7-panel">
+            <div class="chart7-top-line"></div>
+            <h2>操作层面的自动化，最直观地体现在时间被压缩</h2>
+            <div class="chart7-sub">GitHub Copilot 官方实验确认"完成同一任务快 55.8%"。下面这张斜率图把手工完成时间设为 160 分钟基线，按这一速度增幅换算后，AI 辅助情境约为 103 分钟。</div>
+            <div id="chart7" style="height:360px;"></div>
+            <div class="chart7-question"><b>数据来源：</b>GitHub Research《The Impact of GitHub Copilot on Developer Productivity and Happiness》（2022）与 GitHub Blog《Research: quantifying GitHub Copilot's impact on developer productivity and happiness》。图中的 160 → 103 分钟为按 55.8% 提速比例做的示意换算，并非论文原始时长。</div>
+          </div>
+
+          <p>
+            当这些能力逐渐成为基础设施，它们就不再构成优势。
           </p>
 
           <p>
-            丁宁的回答是："是不是你的industry know-how（行业诀窍）？是不是你的品味？是不是你的格调？是不是你对你这个行业、你对某些方面自己深度的思考和洞察？守住这些东西。"
+            丁宁提出的"生产力三要素"——生产者、生产工具与生产对象——提供了一个更底层的观察框架。当生产工具发生跃迁，从搜索引擎到AI代理，从"获取信息"到"直接执行"，变化的不只是效率，还有分工方式本身。原本需要人工完成的一系列步骤，被压缩为一条可以被调用的流程。
           </p>
+
+          <p>
+            也正因如此，"养龙虾"才会持续吸引普通人。它所承诺的，不只是技术能力，而是一种对时间的重新分配：将原本分散、重复、耗时的任务打包交给机器处理。
+          </p>
+
+          <p>
+            但当这种能力变得普遍，一个新的问题随之出现——如果执行不再稀缺，那么判断会成为什么？
+          </p>
+
+          <p>
+            袁琳给出的答案是，将人的角色收缩为两件事：意图工程与验证工程。前者是明确"要做什么"，后者是判断"结果是否足够好"。在这一框架下，人的价值不再体现在完成任务，而体现在对方向与质量的把控。
+          </p>
+
+          <p>
+            "AI的聪明和人的聪明不是一回事，"他说，"它可以很快给出答案，但并不代表它知道什么是对的。"
+          </p>
+
+          <p>
+            这种区分，或许正是焦虑的分界线。
+          </p>
+
+          <p>
+            微软的一组数据提供了另一种视角：在被定义为"前沿企业"（Frontier Firms）的组织中，93%的员工对未来工作机会持乐观态度，而仅有21%担心AI会取代自己，显著低于全球平均水平。
+          </p>
+
+          <div class="chart3-panel">
+            <div class="chart3-top-line"></div>
+            <h2>前沿企业正在培养“智能体管理者”</h2>
+            <div class="chart3-sub">微软用七项指标识别具备“智能体管理者”心态的人。领导者在每一项指标上都领先于普通员工。</div>
+            <div class="chart3-legend"><span><i class="swatch"></i>领导者</span><span><i class="swatch hatched"></i>员工</span></div>
+            <div id="chart3" style="height:460px;"></div>
+            <div class="chart3-note"><b>数据来源：</b>Microsoft Work Trend Index 2025, <i>The Year the Frontier Firm Is Born</i>。在微软定义的 Frontier Firms 中，93% 的员工对未来工作机会持乐观态度，只有 21% 担心 AI 会抢走自己的工作，显著低于全球 43% 的平均水平。</div>
+          </div>
+
+          <p>
+            也许真正拉开差距的，并不是"是否接触AI"，而是能否将AI从一种制造焦虑的外部压力，转化为一种可被理解、被使用、并最终被驾驭的生产工具。而"龙虾"，不过是这场转变中最早被放大的一个样本。
+          </p>
+
+          <div class="story-source">
+            <b>文章总参考来源：</b>Microsoft Work Trend Index 2025, <i>The Year the Frontier Firm Is Born</i>；OpenAI《GPTs are GPTs》与《Introducing GPT-4.1 in the API》；OpenAI API Pricing；GitHub Research《The Impact of GitHub Copilot on Developer Productivity and Happiness》（2022）；GitHub Blog《Research: quantifying GitHub Copilot's impact on developer productivity and happiness》；《2025年大学生AI使用心态洞察报告》；iMedia Research（艾媒咨询）整理。
+          </div>
+          <div class="story-credit">© 李奕君</div>
 
         </section>
 
@@ -243,6 +667,19 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+  <script src="charts/chart1/script.js"></script>
+  <script src="charts/chart2/script.js"></script>
+  <script src="charts/chart3/script.js"></script>
+  <script src="charts/chart4/script.js"></script>
+  <script src="charts/chart5/script.js"></script>
+  <script src="charts/chart6/script.js"></script>
+  <script src="charts/chart7/script.js"></script>
+  <script src="charts/chart8/script.js"></script>
+  <script src="charts/chart9/script.js"></script>
+  <script src="charts/chart10/script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="charts/chart11/script.js"></script>
+  <script src="charts/chart12/script.js"></script>
   <script src="js/modules/charts.js"></script>
   <script src="js/modules/payment-network.js"></script>
   <script src="js/modules/payment-methods-packed.js"></script>

@@ -31,8 +31,36 @@ body {
   margin-top: 50px;
 }
 
+.story-byline {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #111827;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.story-byline-meta {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #6b7280;
+}
+
 .story-section {
   margin-bottom: 50px;
+}
+
+.story-chart-section-wide {
+  width: min(80vw, 1280px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  .story-chart-section-wide {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .story-subtitle {
@@ -42,6 +70,293 @@ body {
 
 .story-spacer {
   height: 120px;
+}
+
+.story-source {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.story-source b {
+  color: #111827;
+  font-weight: 700;
+}
+
+.story-credit {
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #6b7280;
+  text-align: center;
+}
+
+[class$="-panel"] {
+  position: relative;
+  overflow: visible;
+  padding: 28px 28px 20px !important;
+  margin: 32px 0 !important;
+  background: #ffffff !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #111827 !important;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+[class$="-panel"]::before {
+  display: none !important;
+}
+
+[class$="-panel"] > * {
+  position: relative;
+  z-index: 1;
+}
+
+[class$="-top-line"] {
+  height: 1px !important;
+  background: #e5e7eb !important;
+  margin-bottom: 14px !important;
+}
+
+[class$="-panel"] h2 {
+  margin: 0 !important;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  font-size: clamp(17px, 2vw, 22px) !important;
+  line-height: 1.45 !important;
+  color: #111827 !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+}
+
+[class$="-sub"],
+[class$="-question"],
+[class$="-note"],
+[class$="-step"] p,
+[class$="-card-body"],
+[class$="-label"],
+[class$="-meta"],
+[class$="-explainer"],
+[class$="-suggestions"],
+[class$="-bar-label"],
+[class$="-card-type"],
+.callout .cnote,
+.role-table-source {
+  color: #4b5563 !important;
+}
+
+[class$="-sub"] {
+  margin-top: 6px !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+
+[class$="-question"],
+[class$="-note"],
+.chart3-note,
+.chart10-note,
+.role-table-source {
+  margin-top: 12px !important;
+  font-size: 12px !important;
+  line-height: 1.7 !important;
+}
+
+.chart5-legend {
+  display: none !important;
+}
+
+.chart4-stats,
+.chart8-callouts {
+  gap: 10px !important;
+}
+
+.chart4-stat,
+.chart8-callout,
+.chart9-result,
+.chart11-card,
+.role-table-card {
+  border: 1px solid #e5e7eb !important;
+  background: #ffffff !important;
+}
+
+.chart4-stat {
+  padding: 14px 12px !important;
+}
+
+.chart4-stat-value,
+.chart8-value,
+.chart9-badge strong {
+  color: #ef4444 !important;
+}
+
+.chart2-layout,
+.chart8-layout,
+.chart10-scrolly,
+.chart11-layout {
+  margin-top: 16px !important;
+}
+
+.callout-group {
+  border-left: 1px solid #e5e7eb !important;
+}
+
+.callout-title {
+  border-top: 1px solid #e5e7eb !important;
+  color: #111827 !important;
+}
+
+.callout .pct,
+.callout .clabel,
+.chart3-survey,
+.chart11-card-title,
+.chart10-step-title {
+  color: #111827 !important;
+}
+
+.chart3-legend {
+  color: #4b5563 !important;
+  margin: 12px 0 8px !important;
+}
+
+.swatch {
+  background: #ef4444 !important;
+}
+
+.swatch.hatched {
+  background: repeating-linear-gradient(45deg, #d1d5db 0 3px, #9ca3af 3px 5px) !important;
+  border: 0 !important;
+}
+
+.chart9-input,
+.chart9-button,
+.chart9-chip {
+  border: 1px solid #d1d5db !important;
+  background: #ffffff !important;
+  color: #111827 !important;
+}
+
+.chart9-input::placeholder {
+  color: #9ca3af !important;
+}
+
+.chart9-button,
+.chart9-chip {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.chart9-button:hover,
+.chart9-chip:hover,
+.chart9-chip:focus,
+.chart9-button:focus {
+  background: #f9fafb !important;
+  border-color: #ef4444 !important;
+  color: #111827 !important;
+}
+
+.chart9-track {
+  height: 8px !important;
+  background: #e5e7eb !important;
+}
+
+.chart9-fill {
+  background: #ef4444 !important;
+}
+
+.chart9-suggestions button {
+  border: 1px solid #d1d5db !important;
+  background: #ffffff !important;
+  color: #111827 !important;
+}
+
+.chart10-step {
+  min-height: 40vh !important;
+  padding: 14px 0 14px 16px !important;
+  border-left: 1px solid #d1d5db !important;
+  color: #6b7280 !important;
+}
+
+.chart10-step.is-active {
+  border-left-color: #ef4444 !important;
+  color: #111827 !important;
+}
+
+.chart11-card.is-active {
+  border-color: #ef4444 !important;
+  background: #fef2f2 !important;
+}
+
+#chart11-map {
+  border: 1px solid #e5e7eb !important;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #ffffff !important;
+  color: #111827 !important;
+  box-shadow: none !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(255,255,255,.92) !important;
+  color: #6b7280 !important;
+}
+
+.role-table-card {
+  margin: 28px 0 36px;
+  padding: 24px 26px;
+  border-radius: 0;
+}
+
+.role-table-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #111827;
+}
+
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.role-table th,
+.role-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.role-table th {
+  color: #111827;
+  font-weight: 600;
+  background: #f9fafb;
+}
+
+@media (max-width: 700px) {
+  [class$="-panel"] {
+    padding: 20px 16px 16px !important;
+  }
+
+  .role-table-card {
+    padding: 18px 16px;
+  }
+
+  .role-table-title {
+    font-size: 18px;
+  }
+
+  .role-table {
+    font-size: 14px;
+  }
+
+  .chart10-step {
+    min-height: auto !important;
+  }
 }
 
 .cover {

@@ -1,0 +1,73 @@
+/* ── Chart 2: Why Employees Turn to AI ── */
+.chart2-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 48px 30px;
+  margin: 36px 0;
+  background:
+    radial-gradient(circle at 20% 35%, rgba(255,255,255,.04), transparent 24%),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,.035), transparent 28%),
+    linear-gradient(180deg, #284977 0%, #1f3d66 100%);
+  border-radius: 2px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.22);
+  color: #f4fbff;
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.chart2-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .20;
+  background-image:
+    linear-gradient(35deg, rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(0,0,0,.11) 1px, transparent 1px);
+  background-size: 17px 17px, 23px 23px;
+  mix-blend-mode: overlay;
+}
+.chart2-panel > * { position: relative; z-index: 1; }
+.chart2-panel h2 { margin: 0; font-size: clamp(24px, 2.8vw, 38px); line-height: 1.12; font-weight: 800; color: #f4fbff; text-align: center !important; }
+.chart2-sub { margin-top: 6px; color: rgba(244,251,255,.92); font-size: clamp(16px, 1.6vw, 24px); line-height: 1.35; font-weight: 400; text-align: center !important; }
+.chart2-panel {
+  width: min(100%, 1180px);
+  margin: 36px auto !important;
+}
+.chart2-layout { display: grid; grid-template-columns: 46% 54%; align-items: center; gap: 28px; margin-top: 20px; }
+#chart2 { height: 480px; width: 100%; min-width: 0; }
+.chart2-callouts { min-height: 480px; display: flex; flex-direction: column; justify-content: center; gap: 18px; padding-right: 6px; }
+.callout-group { border-left: 1px solid rgba(220,245,255,.35); padding-left: 16px; }
+.callout-title { font-weight: 800; color: rgba(244,251,255,.9); border-top: 1px solid rgba(220,245,255,.35); padding-top: 10px; margin-bottom: 8px; font-size: 15px; }
+.callout { display: grid; grid-template-columns: 70px 1fr; gap: 10px; margin: 8px 0; align-items: baseline; }
+.callout {
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background-color .18s ease, transform .18s ease, opacity .18s ease;
+  cursor: pointer;
+}
+.chart2-callouts.is-dimmed .callout {
+  opacity: .55;
+}
+.callout.is-active {
+  opacity: 1 !important;
+  background: rgba(255,255,255,.1);
+  transform: translateX(4px);
+}
+.callout.is-active .pct,
+.callout.is-active .clabel {
+  color: #ef4444;
+}
+.callout .pct { font-size: 24px; font-weight: 800; }
+.callout .clabel { font-size: 18px; font-weight: 800; }
+.callout .cnote { color: rgba(244,251,255,.7); font-style: italic; font-size: 15px; line-height: 1.45; margin-top: 2px; }
+.chart2-question { margin-top: 16px; font-size: 15px; line-height: 1.55; color: rgba(244,251,255,.85); text-align: center; }
+.chart2-question b { font-weight: 800; }
+@media (max-width: 900px) {
+  .chart2-panel { padding: 24px 18px; }
+  .chart2-layout { grid-template-columns: 1fr; }
+  #chart2 { height: 360px; }
+  .chart2-callouts { min-height: auto; gap: 14px; }
+  .callout { grid-template-columns: 54px 1fr; }
+  .callout .pct { font-size: 20px; }
+  .callout .clabel { font-size: 16px; }
+  .callout .cnote { font-size: 13px; }
+}
